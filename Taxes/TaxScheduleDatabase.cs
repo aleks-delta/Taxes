@@ -47,6 +47,7 @@ namespace Taxes
                 var day = entries[4];
                 var rate = entries[5];
                 var taxEntry = new TaxScheduleEntryWeekly(int.Parse(year), int.Parse(month), int.Parse(day), double.Parse(rate));
+                AddTaxToCity(city, taxEntry);
             }
             else if (mode == "daily")
             {
@@ -55,9 +56,10 @@ namespace Taxes
                 var day = entries[4];
                 var rate = entries[5];
                 var taxEntry = new TaxScheduleEntryDaily(int.Parse(year), int.Parse(month), int.Parse(day), double.Parse(rate));
+                AddTaxToCity(city, taxEntry);
             }
             else
-                throw new Exception(string.Format("Unrecognized mode {0}: Expecting Yearly, Monthly, Weekly or Daily\n Original line: {1}", mode, line));
+                throw new Exception(string.Format("Unrecognized mode '{0}': Expecting Yearly, Monthly, Weekly or Daily\n Original line: {1}", mode, line));
         }
 
         public void AddTaxToCity(string city, TaxScheduleEntry scheduleEntry)

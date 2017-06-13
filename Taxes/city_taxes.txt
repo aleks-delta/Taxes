@@ -6,5 +6,9 @@ Vilnius Daily 2016 12 25 0.1
 Kaunas Yearly 2016 0.3
 Kaunas Monthly 2016 7 0.5
 Kaunas Monthly 2016 3 0.7
-Kaunas Daily 2016 12 25 0.01
+Kaunas Daily 2016 2 23 0.01
+
+Prague Weekly 2017 4 22 0.2
+Prague Weekly 2017 12 31 0.1
+Prague Weekly 2017 2 20 0.11
 

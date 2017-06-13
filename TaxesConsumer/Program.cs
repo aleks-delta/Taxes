@@ -9,9 +9,18 @@ namespace TaxesConsumer
         {
             Console.Out.WriteLine("Loading cities tax data");
             var scheduleDB = new Taxes.TaxScheduleDatabase();
-            scheduleDB.LoadFromFile("../../../Taxes/city_taxes.txt");
-            Console.Out.WriteLine("press key to get tax for Kaunas on 1 July 2016");
-            Console.ReadKey();
+            try
+            {
+                scheduleDB.LoadFromFile("../../../Taxes/city_taxes.txt");
+                Console.Out.WriteLine("press key to get tax for Kaunas on 1 July 2016");
+                Console.ReadKey();
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Incorrect file format: {0}\n Press any key to exit", ex.Message);
+                Console.ReadKey();
+                return;
+            }
 
             double kaunasSummerRate = 0.0;
             try
@@ -42,7 +51,15 @@ namespace TaxesConsumer
             var VilniusMayRate = scheduleDB.GetTaxForCity("Vilnius", mayDay);
 
             Console.Out.WriteLine("May 1: Kaunas rate = {0}, Vilnius rate = {1}", KaunasMayRate, VilniusMayRate);
+            Console.Out.WriteLine("press key to get Prague rate for New Year 2018");
 
+            Console.ReadKey();
+
+            var nyDay = new DateTime(2018, 1, 1);
+            var pragueNYRate = scheduleDB.GetTaxForCity("Prague", nyDay);
+
+            Console.Out.WriteLine("The New Year 2018 rate for Prague is {0}", pragueNYRate);
+            
             Console.Out.WriteLine("Press key to exit consumer program");
             Console.ReadKey();
         }
