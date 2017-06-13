@@ -49,8 +49,5 @@ namespace Taxes.Tests
             var actualTax = schedule.GetTax(new DateTime(2016, 3, 16));
             Assert.AreEqual(0.2, actualTax);
         }
-
-       
-
     }
 }

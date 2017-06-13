@@ -1,0 +1,10 @@
+Vilinus Yearly 2016 0.2
+Vilnius Monthly 2016 5 0.4
+Vilnius Daily 2016 1 1 0.1
+Vilnius Daily 2016 12 25 0.1
+
+Kaunas Yearly 2016 0.3
+Kaunas Monthly 2016 7 0.5
+Kaunas Monthly 2016 3 0.7
+Kaunas Daily 2016 12 25 0.01
+
