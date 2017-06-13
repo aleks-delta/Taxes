@@ -6,7 +6,6 @@ namespace Taxes.Tests
     [TestClass]
     public class TaxScheduleTests
     {
-
         private TaxSchedule CreateVilniusYearlyTaxSchedule()
         {
             var entry = new TaxScheduleEntryYearly(2016, 0.1);

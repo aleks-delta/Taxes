@@ -25,10 +25,10 @@ namespace Taxes
         Yearly, Monthly, Weekly, Daily
     };
 
-    public class TaxSchedule : ITaxGetter
+    internal class TaxSchedule : ITaxGetter
     {
         string cityName;
-        public TaxSchedule(string city)
+        internal TaxSchedule(string city)
         {
             cityName = city;
         } 
